@@ -1,0 +1,124 @@
+.header {
+	position: sticky;
+	inline-size: 100%;
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	z-index: 50;
+	padding-block: toRem(24);
+	background-color: var(--bg-color);
+	// .header__container
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 5;
+		inline-size: toRem(40);
+        block-size: toRem(40);
+	}
+	&__block {
+	}
+}
+.menu {
+	&__body {
+		position: relative;
+		@media(max-width: 770px) {
+			position: fixed;
+			inset-inline-start: 100%;
+			inset-block-start: 0;
+			inline-size: 100%;
+			block-size: 100vh;
+			z-index: 3;
+			transition: inset-inline-start 0.3s;
+			overflow: auto;
+			padding: 150px 15px 30px;
+			background-color: #000;
+
+			font-size: toRem(18);
+
+			&::before {
+				content: "";
+				position: fixed;
+				block-size: 84px;
+				inline-size: 100%;
+				inset-inline-start: 100%;
+				inset-block-start: 0;
+				z-index: 3;
+				background-color: #000;
+				transition: inset-inline-start 0.3s;
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		column-gap: toRem(24);
+		row-gap: toRem(3);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media(max-width: 700px) {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+	// .menu__link
+	&__link {
+		position: relative;
+		// padding: toRem(8) toRem(12);
+		text-transform: uppercase;
+		// transition: color 0.3s;
+		// @media(any-hover: hover){
+		// 	&:hover {
+		// 		color: var(--blue-color);
+		// 	}
+		// }
+	}
+}
+
+.icon-menu {
+	display: none;
+
+	@media(max-width: 770px) {
+		flex-shrink: 0;
+		flex-basis: 24px;
+		display: flex;
+		flex-direction: column;
+		z-index: 5;
+	}
+	span {
+		@media(max-width: 770px) {
+			margin-block: 6px;
+		}
+	}
+}
+@media(max-width: 770px) {
+	.icon-menu span, .icon-menu::before, .icon-menu::after {
+		content: "";
+		transition: all 0.3s;
+		height: 2px;
+		width: 100%;
+		background-color: #fff;
+	}
+	.open-menu .menu__body, .open-menu .menu__body::before{
+		inset-inline-start: 0;
+	} 
+	.open-menu .icon-menu span {
+		width: 0;
+		height: 0;
+		margin: 0;
+	}
+	.open-menu .icon-menu:before {
+		transform: rotate(45deg) translateY(1.5px);
+	}
+	.open-menu .icon-menu:after {
+		transform: rotate(-45deg) translateY(-1.5px);
+	}
+
+	.open-menu body {
+		overflow: hidden;
+	}
+}
+

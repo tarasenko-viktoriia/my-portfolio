@@ -1,0 +1,143 @@
+@use "sass:math";
+
+
+@import "_mixins.scss";
+
+
+/* Скидання стилів */
+@import url("reset.css");
+
+// Змінні
+@import url("variables.css");
+
+/* Основні стилі */
+body {
+	background-color: var(--bg-color);
+	color: var(--main-text-color);
+	// line-height: 1.5;
+	font-size: toRem(14);
+
+	// @media (min-width: toEm(768)) and (max-width: toEm(1629.98)) {
+	// 	font-size: toRem(16);
+	// }
+	// @media (min-width: toEm(1630)) {
+	// 	font-size: toRem(18);
+	// }
+	font-family: "Inter", sans-serif;
+
+	// opacity: 0;
+	// transition: opacity 1.5s;
+
+	// .lock & {
+	// 	overflow: hidden;
+	// 	touch-action: none;
+	// 	overscroll-behavior: none;
+	// }
+	// .loaded & {
+	// 	opacity: 1;
+	// }
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip; /* clip */
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+// Компоненти
+@import "_components.scss";
+// @import "_popups.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+
+/* --------------------- */
+[class*="__container"] {
+	max-width: toRem(1440);
+	padding-inline: toRem(15);
+	margin: 0 auto;
+	// @media (min-width: toEm(376)) {
+	// 	padding-inline: toRem(32);
+	// }
+	// @media (min-width: toEm(769)) {
+	// 	padding-inline: toRem(24);
+	// }
+}
+/* --------------------- */
+.hero {
+	padding-block: toRem(100);
+	&__header {
+		position: relative;
+		display: flex;
+	}
+	&__title{
+		position: relative;
+		display: flex;
+		h1{
+			color: #FFF;
+			font-family: Poppins;
+			font-size: toRem(116);
+			font-weight: 700;
+			line-height: 1.2; 
+			text-transform: uppercase;
+			// max-width: toRem(1000);
+			
+			flex-grow: 1;
+		}
+		
+		// margin: 0 auto;
+		// text-align: right;
+	}
+	&__img {
+		position: absolute;
+		max-width: toRem(255);
+		bottom: 0;
+		left: 0;
+		img{
+			border-radius: 50%;
+			aspect-ratio: 1 / 1;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__avatar {
+		border-radius: 2px  80px 80px 80px;
+		background-color: #1A1A1C;
+		padding: toRem(8);
+		width: toRem(96); 
+		height: toRem(96); 
+		display: flex; 
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		position: absolute;
+
+		// bottom: 0;
+		// right: 0;
+
+		img {
+			border-radius: 50%;
+			aspect-ratio: 1 / 1;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-evenly;
+		gap: toRem(10);
+		align-items: flex-end;
+	}
+	&__text {
+		color: var(--second-text-color);
+		font-family: Poppins;
+		font-size: toRem(16);
+		max-width: toRem(645);
+	}
+}
