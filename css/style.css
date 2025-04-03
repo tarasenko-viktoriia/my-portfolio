@@ -65,6 +65,83 @@ body {
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
+:root {
+  --cards:4;
+  --cardHeight: 87vh;
+  --cardTopPadding: 1.5em; /* величина, що зміню відступи між картками */
+  --cardMargin: 4vw;
+}
+
+.project {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#cards {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+  --index: 1;
+}
+
+#card2 {
+  --index: 2;
+}
+
+#card3 {
+  --index: 3;
+}
+
+#card4 {
+  --index: 4;
+}
+
+.card {
+  position: sticky;
+  top: 80px;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body {
+  background-color: #382080;
+}
+
+#card2 .card-body {
+  background-color: #131F2B;
+}
+
+#card3 .card-body {
+  background-color: #69081A;
+}
+
+#card4 .card-body {
+  background-color: #147536;
+}
+
+.card-body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+  border-radius: 50px;
+  height: var(--cardHeight);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header {
   position: sticky;
   inline-size: 100%;
