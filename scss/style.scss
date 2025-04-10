@@ -179,6 +179,8 @@ body {
         flex-direction: column;
         align-items: flex-end;
         gap: toRem(25);
+
+
         img {
             inline-size: toRem(116);
             block-size: toRem(116);
@@ -219,7 +221,9 @@ body {
     }
 }
 
-
+#typing-text {
+    min-width: toRem(600);
+}
 #stars, #stars2, #stars3 {
     position: fixed;
     top: 0;
