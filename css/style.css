@@ -43,6 +43,13 @@ body {
   border-radius: 50%;
   font-size: 1.125rem;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+@media (any-hover: hover) {
+  .icon-block__item:hover {
+    background-color: var(--blue-color);
+  }
 }
 .icon-block p {
   font-family: Poppins;
@@ -372,6 +379,13 @@ body {
 .menu__link {
   position: relative;
   text-transform: uppercase;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (any-hover: hover) {
+  .menu__link:hover {
+    color: var(--blue-color);
+  }
 }
 
 .icon-menu {
@@ -606,6 +620,83 @@ body {
   padding: 16px 22.44px 16px 24px;
   font-size: 1.3125rem;
   line-height: 1.87; /* 187.135% */
+}
+
+.stack__container {
+  max-width: 73.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.125rem;
+}
+.stack__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.375rem;
+}
+.stack__header h2 {
+  font-size: 2.25rem;
+  line-height: 1.67; /* 167.686% */
+}
+.stack__header p {
+  color: Var(--gray-color-01);
+  font-size: 1rem;
+  line-height: 1.66; /* 166.957% */
+}
+
+.block-stack {
+  position: relative;
+  z-index: 5;
+}
+.block-stack__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9375rem;
+}
+.block-stack__item {
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid var(--black-color-01);
+  background: var(--black-color-02);
+}
+.block-stack__icon {
+  padding: 0.5rem;
+  border-radius: 0.4375rem;
+  border: 0.0625rem solid var(--black-color-01);
+  background-color: var(--black-color-03);
+}
+.block-stack__icon img {
+  inline-size: 1.875rem;
+  block-size: toReM(30);
+}
+.block-stack__text {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.5; /* 150% */
+}
+.block-stack__text h5 {
+  color: var(--gray-color-02);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.block-stack__text p {
+  color: var(--gray-color-03);
+  font-weight: 500;
 }
 
 #typing-text {

@@ -221,6 +221,106 @@ body {
     }
 }
 
+.home-page {
+
+		// .home-page__stack
+
+		&__stack {
+		}
+}
+.stack {
+
+		// .stack__container
+
+		&__container {
+            max-width: toRem(1170);
+            display: flex;
+            flex-direction: column;
+            gap: toRem(50);
+		}
+
+		// .stack__block
+
+		&__block {
+		}
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(6);
+            h2 {
+                font-size: toRem(36);
+                line-height: 1.67; /* 167.686% */
+            }
+
+            p {
+                color: Var(--gray-color-01);
+                font-size: toRem(16);
+                line-height: 1.66; /* 166.957% */
+            }
+        }
+}
+.block-stack {
+    position: relative;
+    z-index: 5;
+
+		// .block-stack__list
+
+		&__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: toRem(15);
+		}
+
+		// .block-stack__item
+
+		&__item {
+            padding: toRem(20);
+            display: flex;
+            align-items: center;
+            gap: toRem(10);
+            border-radius: toRem(12);
+            border: toRem(1) solid var(--black-color-01);
+            background: var(--black-color-02);
+		}
+
+		// .block-stack__icon
+
+		&__icon {
+            padding: toRem(8);
+            border-radius: toRem(7);
+            border: toRem(1) solid var(--black-color-01);
+            background-color: var(--black-color-03);
+
+            img{
+                inline-size: toRem(30);
+                block-size: toReM(30);
+            }
+            
+		}
+
+		// .block-stack__text
+
+		&__text {
+            font-family: "Space Grotesk", sans-serif;
+            line-height: 1.5; /* 150% */
+
+            h5{
+                color: var(--gray-color-02);
+                font-size: toRem(20);
+                font-weight: 700;
+                
+            }
+            p {
+                color: var(--gray-color-03);
+                font-weight: 500;
+            }
+            
+		}
+}
+
+
+
 #typing-text {
     min-width: toRem(600);
 }

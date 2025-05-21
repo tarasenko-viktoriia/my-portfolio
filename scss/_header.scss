@@ -69,12 +69,12 @@
 		position: relative;
 		// padding: toRem(8) toRem(12);
 		text-transform: uppercase;
-		// transition: color 0.3s;
-		// @media(any-hover: hover){
-		// 	&:hover {
-		// 		color: var(--blue-color);
-		// 	}
-		// }
+		transition: color 0.3s;
+		@media(any-hover: hover){
+			&:hover {
+				color: var(--blue-color);
+			}
+		}
 	}
 }
 

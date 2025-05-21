@@ -10,6 +10,13 @@
         border-radius: 50%;
         font-size: toRem(18);
         cursor: pointer;
+
+        transition: background-color 0.3s;
+        @media(any-hover: hover){
+          &:hover {
+            background-color: var(--blue-color);
+          }
+        }
     }
     p {
         font-family: Poppins;
