@@ -1,38 +1,60 @@
-// .footer {
-//    padding-bottom: toRem(24);
-//    // .footer__container
+.footer {
 
-//    &__container {
-//       border-radius: toRem(10);
-//    	background-color: var(--bg-white-color);
-//       padding: toRem(24) toRem(40);
-//       font-weight: 600;
-//       line-height: 1.28; /* 128.571% */
-//       text-transform: uppercase;
-//       display: flex;
-//       justify-content: space-between;
-//       gap: toRem(16);
-//       transition: color 0.3s;
+		// .footer__container
 
-//       @media (max-width: 900px) {
-//          flex-direction: column;
-//       }
-//    }
-//    &__link {
-//       @media(any-hover: hover){
-// 			&:hover {
-// 				color: var(--blue-color);
-// 			}
-// 		}
-//    }
-//    &__block {
-//       padding-inline: toRem(24);
+		&__block {
+         display: flex;
+         flex-direction: column;
+         padding-block: toRem(50);
+         padding-inline: toRem(30);
+         gap: toRem(30);
+         max-width: toRem(812);
+         margin: 0 auto;
+         background: radial-gradient(100% 100% at 65.9% 103.4%, rgba(0, 0, 0, 0.53) 0%, #000 100%), url("../img/footer-bg.png") 0 0 /100% no-repeat ;
+		}
 
-//       @media (max-width: 767.99px) {
-//          padding-inline: toRem(32);
-//       }
-//       @media (max-width: 374.99px) {
-//          padding-inline: toRem(16);
-//       }
-//    }
-// }
+		// .footer__header
+
+		&__header {
+
+         h2 {
+            font-size: toRem(70);
+            line-height: 1.37; /* 137.143% */
+         }
+
+         h2:first-of-type {
+            display: inline-flex;
+            align-items: center;
+            gap: toRem(62);
+         }
+         h2:first-of-type::before {
+            content: "";
+            flex-shrink: 0;
+            inline-size: toRem(64);
+            block-size: toRem(64);
+            background: url("../img/letter.svg") 0 0 /100% no-repeat;
+         }
+		}
+
+      &__btn-block {
+         display: flex;
+         justify-content: space-between;
+         gap: toRem(10);
+
+         p {
+            color: var(--gray-color-01);
+            font-size: toRem(16);
+            line-height: 1.96; /* 196.169% */
+            max-width: toRem(360);
+         }
+      }
+
+      &__img {
+         transform: scaleX(-1);
+      }
+
+      &__icons {
+         display: flex;
+         gap: toRem(200);
+      }
+}

@@ -6,7 +6,7 @@ document.addEventListener("click", function(e){
 		e.preventDefault()
 	}
 })
-const button = document.querySelector(".button-contacts");
+const buttons = document.querySelectorAll(".button-contacts");
 
 // button.addEventListener("click", (e) => {
 //     e.preventDefault(); 
@@ -17,10 +17,12 @@ const button = document.querySelector(".button-contacts");
 // });
 
 setInterval(() => {
-    button.classList.add("animate");
-    setTimeout(() => {
-        button.classList.remove("animate");
-    }, 2000); 
+    buttons.forEach((button) => {
+        button.classList.add("animate");
+        setTimeout(() => {
+            button.classList.remove("animate");
+        }, 2000);
+    });
 }, 5000);
 
 
