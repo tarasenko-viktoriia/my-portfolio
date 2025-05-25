@@ -163,13 +163,14 @@
 }
 
 .cards {
-    
+    margin-inline: toRem(15);
     &__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: toRem(12);
         border-bottom: toRem(1) solid #94949444;
+        @include adaptiveValue("font-size", 14, 12);
 
         width: 100%;
     }
@@ -189,8 +190,9 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: toRem(25);
-      padding: toRem(32) toRem(16);
+      @include adaptiveValue("gap", 25, 15);
+      @include adaptiveValue("padding-block", 32, 22);
+      @include adaptiveValue("padding-inline", 16, 12);
       border-radius: toRem(16);
       height: var(--cardHeight);
     }
@@ -213,23 +215,24 @@
       width: 100%;
         color: #FFF;
         font-family: Poppins;
-        font-size: toRem(40);
+        @include adaptiveValue("font-size", 40, 20);
         line-height: 1.2; /* 120.755% */
         letter-spacing: toRem(1);
 
         display: flex;
         justify-content: space-between;
+        gap: toRem(10);
 
         &::after {
           content: "";
-          inline-size: toRem(36);
-          block-size: toRem(36);
+          @include adaptiveValue("inline-size", 36, 24);
+          @include adaptiveValue("block-size", 36, 24);
           flex-shrink: 0;
           background: url(../img/arrow.svg) 0 0 / 100% no-repeat;
         }
     }
     &__skills {
-      font-size: toRem(14);
+      @include adaptiveValue("font-size", 14, 10);
       line-height: 1.25; /* 125.49% */
       letter-spacing: toRem(1);
     }

@@ -48,3 +48,15 @@ function typeEffect() {
 }
 
 typeEffect();
+
+document.addEventListener("DOMContentLoaded", function(){
+    const showMoreBtn = document.querySelector(".block-stack__show-more")
+    const list= document.querySelector(".block-stack__list")
+
+    if(showMoreBtn && list) {
+        showMoreBtn.addEventListener('click', () => {
+            list.classList.toggle("show-all")
+            showMoreBtn.classList.toggle('rotated')
+        })
+    }
+})
