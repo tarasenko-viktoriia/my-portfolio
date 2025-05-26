@@ -14,7 +14,6 @@
 body {
 	background-color: var(--bg-color);
 	color: var(--main-text-color);
-	// line-height: 1.5;
 	font-size: toRem(14);
 
 	// @media (min-width: toEm(768)) and (max-width: toEm(1629.98)) {
@@ -60,12 +59,6 @@ body {
 	max-width: toRem(1440);
 	padding-inline: toRem(15);
 	margin: 0 auto;
-	// @media (min-width: toEm(376)) {
-	// 	padding-inline: toRem(32);
-	// }
-	// @media (min-width: toEm(769)) {
-	// 	padding-inline: toRem(24);
-	// }
 }
 /* --------------------- */
 .hero {
@@ -155,7 +148,6 @@ body {
 	&__footer {
         display: grid;
         grid-template-columns: auto 1fr auto;
-        // grid-template-columns: minmax(150px, 1fr) minmax(200px, 2fr) minmax(150px, 1fr);
 		gap: toRem(20);
 		align-items: flex-end;
 
