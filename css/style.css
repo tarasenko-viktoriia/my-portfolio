@@ -192,7 +192,6 @@ body {
   grid-template-rows: repeat(var(--cards), var(--cardHeight));
   gap: var(--cardMargin);
   padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-  margin-bottom: var(--cardMargin);
 }
 
 #card1 {
@@ -797,17 +796,20 @@ body {
 /* --------------------- */
 @media (min-width: 91.875em) {
   .hero {
-    padding-block: 6.25rem;
+    -webkit-padding-before: 6.25rem;
+            padding-block-start: 6.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 91.875em) {
   .hero {
-    padding-block: clamp( 3.125rem , 2.2554347826rem  +  4.347826087vw , 6.25rem );
+    -webkit-padding-before: clamp( 3.125rem , 2.2554347826rem  +  4.347826087vw , 6.25rem );
+            padding-block-start: clamp( 3.125rem , 2.2554347826rem  +  4.347826087vw , 6.25rem );
   }
 }
 @media (max-width: 20em) {
   .hero {
-    padding-block: 3.125rem;
+    -webkit-padding-before: 3.125rem;
+            padding-block-start: 3.125rem;
   }
 }
 .hero__container {
@@ -1224,6 +1226,48 @@ body {
   }
 }
 
+.home-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 91.875em) {
+  .home-page {
+    gap: 6.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 91.875em) {
+  .home-page {
+    gap: clamp( 3.125rem , 2.2554347826rem  +  4.347826087vw , 6.25rem );
+  }
+}
+@media (max-width: 20em) {
+  .home-page {
+    gap: 3.125rem;
+  }
+}
+@media (min-width: 91.875em) {
+  .home-page {
+    -webkit-margin-after: 3.125rem;
+            margin-block-end: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 91.875em) {
+  .home-page {
+    -webkit-margin-after: clamp( 1.5625rem , 1.1277173913rem  +  2.1739130435vw , 3.125rem );
+            margin-block-end: clamp( 1.5625rem , 1.1277173913rem  +  2.1739130435vw , 3.125rem );
+  }
+}
+@media (max-width: 20em) {
+  .home-page {
+    -webkit-margin-after: 1.5625rem;
+            margin-block-end: 1.5625rem;
+  }
+}
 .stack__container {
   max-width: 73.125rem;
   display: -webkit-box;
