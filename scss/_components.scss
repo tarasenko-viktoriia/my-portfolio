@@ -62,7 +62,7 @@
 .button-contacts:after {
   position: absolute;
   content: "";
-  width: 150%;
+  width: clamp(100%, 150%, 300px);
   left: 50%;
   height: 100%;
   transform: translateX(-50%);
