@@ -39,11 +39,19 @@
 
     display: inline-block;
 
+    justify-self: end;
+
     flex-shrink: 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     position: relative;
 
     transition: transform 0.2s ease;
+
+    @media (max-width: 490px) {
+      width: 100%;
+      justify-self: start;
+      text-align: center;
+    }
 }
 .button-contacts:active {
   transform: scale(0.96);
