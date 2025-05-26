@@ -3,6 +3,7 @@
     align-items: center;
     gap: toRem(16);
 
+    flex-shrink: 0;
 
     &__item {
         background-color: #171717;
@@ -42,6 +43,7 @@
     justify-self: end;
 
     flex-shrink: 0;
+    align-self: flex-start;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     position: relative;
 

@@ -216,12 +216,19 @@ body {
         z-index: 5;
         max-width: toRem(1170);
         display: flex;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+        @media (max-width: 650px) {
+            gap: toRem(15);
+        }
     }
 
     // .about__text
 
     &__text {
-        font-size: toRem(41);
+        @include adaptiveValue("font-size", 41, 24);
         line-height: 1.5; /* 149.238% */
         opacity:  1;
         background: linear-gradient(79deg, #FFF 0%, rgba(255, 255, 255, 0.25) 94.32%);
@@ -235,15 +242,26 @@ body {
 
 
         img {
-            inline-size: toRem(116);
-            block-size: toRem(116);
+            @include adaptiveValue("inline-size", 116, 50);
+            @include adaptiveValue("inline-size", 116, 50);
+
+            @media (max-width: 650px) {
+                display: none;
+            }
         }
     }
 
     // .about__block
 
     &__block {
-        
+        @media (max-width: 1024px) {
+            display: flex;
+            gap: toRem(15);
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     // .about__img
@@ -251,12 +269,22 @@ body {
     &__img {
         margin-left: 30%;
         max-width: toRem(346);
+
+        @media (max-width: 1024px) {
+            margin-left: 0;
+        }
+
         img {
             aspect-ratio: 346 / 434;
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 16px 16px 0 0;
+
+            @media (max-width: 1024px) {
+                border-radius: 16px;
+            }
+
         }
     }
 
@@ -269,8 +297,12 @@ body {
         backdrop-filter: blur(22.5px);
         padding: 16px 22.44px 16px 24px;
 
-        font-size: toRem(21);
+        @include adaptiveValue("font-size", 21, 16);
         line-height: 1.87; /* 187.135% */
+
+        @media (max-width: 1024px) {
+            align-self: center;
+        }
     }
 }
 
@@ -423,6 +455,9 @@ body {
 
 #typing-text {
     min-width: toRem(600);
+    @media (max-width: 1024px) {
+        min-width: 0;
+    }
 }
 #stars, #stars2, #stars3 {
     position: fixed;
