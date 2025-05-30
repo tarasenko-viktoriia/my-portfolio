@@ -378,6 +378,7 @@ body {
 		// .block-stack__item
 
 		&__item {
+            position: relative;
             padding: toRem(20);
             display: flex;
             align-items: center;
@@ -385,6 +386,7 @@ body {
             border-radius: toRem(12);
             border: toRem(1) solid var(--black-color-01);
             background: var(--black-color-02);
+            overflow: hidden;
 		}
 
 		// .block-stack__icon

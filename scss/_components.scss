@@ -55,9 +55,14 @@
       text-align: center;
     }
 }
-.button-contacts:active {
-  transform: scale(0.96);
+.button-contacts:hover {
+  background-color: #fff;
+  color: var(--blue-color);
+  box-shadow: 0 0 0 3px rgba(4, 4, 186, 0.8), 0 0 12px rgba(4, 4, 186, 0.6);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
 }
+
 .button-contacts:before,
 .button-contacts:after {
   position: absolute;
@@ -69,7 +74,7 @@
   z-index: -1000;
   background-repeat: no-repeat;
 }
-.button-contacts.animate::before, .button-contacts:hover::before {
+.button-contacts.animate::before{
   top: -70%;
   background-image: radial-gradient(circle, var(--main-text-color) 20%, transparent 20%),
     radial-gradient(circle, transparent 20%, var(--main-text-color) 20%, transparent 30%),
@@ -101,7 +106,7 @@
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-.button-contacts.animate::after, .button-contacts:hover::after {
+.button-contacts.animate::after {
   bottom: -70%;
   background-image: radial-gradient(circle, var(--main-text-color) 20%, transparent 20%),
     radial-gradient(circle, var(--main-text-color) 20%, transparent 20%),
@@ -246,4 +251,17 @@
       line-height: 1.25; /* 125.49% */
       letter-spacing: toRem(1);
     }
+}
+
+.circle {
+    position: absolute;
+    width: 9.5rem;
+    height: 9.5rem;
+    background: rgba(255, 255, 255, 0.125); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-out, transform 0.05s linear;
+    filter: blur(3.75rem); 
 }

@@ -92,10 +92,16 @@ body {
   }
 }
 
-.button-contacts:active {
-  -webkit-transform: scale(0.96);
-      -ms-transform: scale(0.96);
-          transform: scale(0.96);
+.button-contacts:hover {
+  background-color: #fff;
+  color: var(--blue-color);
+  -webkit-box-shadow: 0 0 0 3px rgba(4, 4, 186, 0.8), 0 0 12px rgba(4, 4, 186, 0.6);
+          box-shadow: 0 0 0 3px rgba(4, 4, 186, 0.8), 0 0 12px rgba(4, 4, 186, 0.6);
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .button-contacts:before,
@@ -112,7 +118,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.button-contacts.animate::before, .button-contacts:hover::before {
+.button-contacts.animate::before {
   top: -70%;
   background-image: radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--main-text-color) 20%, transparent 30%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--main-text-color) 15%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
@@ -146,7 +152,7 @@ body {
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
-.button-contacts.animate::after, .button-contacts:hover::after {
+.button-contacts.animate::after {
   bottom: -70%;
   background-image: radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--main-text-color) 15%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%), radial-gradient(circle, var(--main-text-color) 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
@@ -425,6 +431,25 @@ body {
   .cards__skills {
     font-size: 0.625rem;
   }
+}
+
+.circle {
+  position: absolute;
+  width: 9.5rem;
+  height: 9.5rem;
+  background: rgba(255, 255, 255, 0.125);
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.05s linear;
+  transition: opacity 0.2s ease-out, -webkit-transform 0.05s linear;
+  transition: opacity 0.2s ease-out, transform 0.05s linear;
+  transition: opacity 0.2s ease-out, transform 0.05s linear, -webkit-transform 0.05s linear;
+  -webkit-filter: blur(3.75rem);
+          filter: blur(3.75rem);
 }
 
 .header {
@@ -1338,6 +1363,7 @@ body {
   display: flex;
 }
 .block-stack__item {
+  position: relative;
   padding: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1349,6 +1375,7 @@ body {
   border-radius: 0.75rem;
   border: 0.0625rem solid var(--black-color-01);
   background: var(--black-color-02);
+  overflow: hidden;
 }
 .block-stack__icon {
   padding: 0.5rem;
