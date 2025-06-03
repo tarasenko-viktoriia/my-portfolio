@@ -199,11 +199,6 @@ body {
   gap: var(--cardMargin);
   padding-bottom: calc(var(--cards) * var(--cardTopPadding));
 }
-@media (max-width: 768px) {
-  #cards {
-    grid-template-rows: auto;
-  }
-}
 
 #card1 {
   --index: 1;
