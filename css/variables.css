@@ -19,3 +19,14 @@
   --card-color-04: rgb(30, 30, 30);
   --blue-color: rgb(4, 4, 186);
 }
+
+@media (max-width: 768px) {
+  :root {
+    --cardHeight: 60vh;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --cardHeight: auto;
+  }
+}
