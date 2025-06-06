@@ -8,6 +8,12 @@ body {
   color: var(--main-text-color);
   font-size: 0.875rem;
   font-family: "Inter", sans-serif;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+body.loaded {
+  opacity: 1;
 }
 
 .wrapper {

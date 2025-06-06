@@ -15,26 +15,13 @@ body {
 	background-color: var(--bg-color);
 	color: var(--main-text-color);
 	font-size: toRem(14);
-
-	// @media (min-width: toEm(768)) and (max-width: toEm(1629.98)) {
-	// 	font-size: toRem(16);
-	// }
-	// @media (min-width: toEm(1630)) {
-	// 	font-size: toRem(18);
-	// }
 	font-family: "Inter", sans-serif;
 
-	// opacity: 0;
-	// transition: opacity 1.5s;
-
-	// .lock & {
-	// 	overflow: hidden;
-	// 	touch-action: none;
-	// 	overscroll-behavior: none;
-	// }
-	// .loaded & {
-	// 	opacity: 1;
-	// }
+	opacity: 0;
+	transition: opacity 1.5s;
+	&.loaded  {
+		opacity: 1;
+	}
 }
 .wrapper {
 	min-height: 100%;
