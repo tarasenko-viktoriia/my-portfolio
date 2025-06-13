@@ -3,13 +3,19 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 })
 
-document.addEventListener("click", function(e){
+document.addEventListener("click", function (e) {
 	const targetElement = e.target
-	if(targetElement.closest(".icon-menu")) {
+
+	if (targetElement.closest(".icon-menu")) {
 		document.documentElement.classList.toggle("open-menu")
 		e.preventDefault()
 	}
+
+	if (targetElement.closest(".menu__link") && document.documentElement.classList.contains("open-menu")) {
+		document.documentElement.classList.remove("open-menu")
+	}
 })
+
 const buttons = document.querySelectorAll(".button-contacts");
 
 setInterval(() => {
