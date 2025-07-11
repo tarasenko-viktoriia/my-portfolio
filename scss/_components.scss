@@ -163,6 +163,9 @@
 #card4 {
     --index: 4;
 }
+#card5 {
+    --index: 5;
+}
 
 #card1 .cards__body {
     background-color: var(--card-color-01);
@@ -175,6 +178,9 @@
 }
 #card4 .cards__body {
     background-color: var(--card-color-04);
+}
+#card5 .cards__body {
+    background-color: var(--card-color-05);
 }
 
 .cards {

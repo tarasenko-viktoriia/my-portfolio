@@ -9,7 +9,7 @@
   --black-color-01: #141415;
   --black-color-02: #101012;
   --black-color-03: #19191A;
-  --cards: 4;
+  --cards: 5;
   --cardHeight: 100vh;
   --cardTopPadding: 1.5em;
   --cardMargin: 4vw;
@@ -17,5 +17,6 @@
   --card-color-02: rgb(30, 50, 50);
   --card-color-03: rgb(60, 70, 90);
   --card-color-04: rgb(30, 30, 30);
+  --card-color-05: rgb(47, 11, 11);
   --blue-color: rgb(4, 4, 186);
 }
